@@ -2,18 +2,19 @@
 """
 basic_cache module
 """
-BaseCaching = __import__('base_caching').BaseCaching
+from base_caching import BaseCaching
 
 
 class BasicCache(BaseCaching):
     """
+    BasicCache defines:
+    - derived class from BaseCachin
+    - unlimited cache
     """
 
     def __init__(self):
         """
-        BasicCache defines:
-        - derived class from BaseCachin
-        - unlimited cache
+        initializer
         """
         super().__init__()
 
@@ -31,3 +32,4 @@ class BasicCache(BaseCaching):
         if key is not None:
             return self.cache_data.get(key)
         return None
+
