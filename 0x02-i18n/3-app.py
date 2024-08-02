@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """
+internationaliztion module
 """
 from flask import Flask, render_template, request
 from flask_babel import Babel
@@ -7,6 +8,7 @@ from flask_babel import Babel
 
 class Config:
     """
+    Babel configuration class
     """
     LANGUAGES = ["en", "fr"]
     BABEL_DEFAULT_LOCALE = "en"
@@ -28,6 +30,7 @@ def get_locale():
 @app.route('/', strict_slashes=False)
 def index():
     """
+    main route
     """
     return render_template('3-index.html')
 
