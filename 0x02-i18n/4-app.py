@@ -2,9 +2,6 @@
 """
 internationaliztion module
 """
-internationaliztion module
-    main route
-    Babel configuration class
 from flask import Flask, render_template, request
 from flask_babel import Babel
 
@@ -34,6 +31,7 @@ def get_locale():
             return lang
     else:
         return request.accept_languages.best_match(app.config['LANGUAGES'])
+
 
 @app.route('/', strict_slashes=False)
 def index():

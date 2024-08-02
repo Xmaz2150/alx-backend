@@ -25,7 +25,9 @@ def get_locale():
     """
     determines the best match with our supported languages
     """
-    return request.accept_languages.best_match(app.config['BABEL_DEFAULT_TIMEZONE'])
+    return request.accept_languages.best_match(
+            app.config['BABEL_DEFAULT_TIMEZONE'])
+
 
 @app.route('/', strict_slashes=False)
 def index():
